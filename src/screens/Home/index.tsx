@@ -51,7 +51,6 @@ export function Home(){
 
     function handleCategorySelect(categoryId: string){
         categoryId === category ? setCategory('') : setCategory(categoryId);
-
     }
     function handleAppointmentDetails(){
         navigation.navigate('AppointmentDetails');
@@ -61,7 +60,6 @@ export function Home(){
     }
     return(
         <Background>
-            <View>
                 <View style = {styles.header}>
                     <Profile/>
                     <ButtonAdd
@@ -78,7 +76,6 @@ export function Home(){
                     
                     />
                 </View>
-                <View style = {styles.content}>
                     <ListHeader
                     
                     title="Partidas Agendadas"
@@ -98,10 +95,8 @@ export function Home(){
                         style = {styles.matches}
                         showsVerticalScrollIndicator = {false}
                         ItemSeparatorComponent = {() => <ListDivider/> }
+                        contentContainerStyle = {{paddingBottom: 69}}
                     />
-                
-                </View>
-            </View>
         </Background>
     );
 }

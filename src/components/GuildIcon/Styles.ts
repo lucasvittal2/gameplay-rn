@@ -4,9 +4,9 @@ import {
 
 export const styles = StyleSheet.create({
     image: {
-        width: 64,
-        height: 64,
+        width: 57,
+        height: 62,
         borderRadius: 8,
-        marginRight: 20
+       
     }
 });
