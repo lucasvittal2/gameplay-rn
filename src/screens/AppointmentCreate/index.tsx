@@ -24,7 +24,7 @@ import { TextArea } from '../../components/TextArea'
 import { styles } from './Style';
 import { theme } from '../../global/styles/theme';
 import { Guilds } from '../Guilds';
-import { GuildProps } from '../../components/Appointment';
+import { GuildProps } from '../../components/Guild';
 ;
 
 type Props = {
@@ -60,7 +60,7 @@ export function AppointmentCreate(){
     function handleGuildSelect(guildSelected: GuildProps){
         setOpenGuildsModal(false);
         setGuild(guildSelected);
-        console.log(guildSelected);
+        
     }
     function handleCategorySelect(categoryId: string){
         setCategory(categoryId);

@@ -4,7 +4,8 @@ import {
     Text,
     Image,
     StatusBar,
-    Alert
+    Alert,
+    ActivityIndicator
 } from 'react-native';
 import { Background} from '../../components/Background';
 
@@ -13,17 +14,19 @@ import { styles } from './Styles'
 import {  useAuth } from '../../hooks/auth';
 import IllustrationImg from '../../assets/illustration.png';
 import { ButtonIcon } from '../../components/ButtonIcon';
+import { theme } from '../../global/styles/theme';
 
 
 
 export function SignIn() {
 
     
-    const {user, signIn} = useAuth();
-    console.log(user);
+    const {loading, signIn} = useAuth();
+    
     async function handleSignIn(){
        try{
             await signIn();
+            
        }catch(error){
             Alert.alert(error);
        }
@@ -42,11 +45,14 @@ export function SignIn() {
                         Crie grupos para jogar seus games {'\n'}
                         favorito com seus amigos {'\n'}
                     </Text>
-                    <ButtonIcon
+                    {loading ? 
+                    <ActivityIndicator color = {theme.colors.primary}/>
+                    :
+                        <ButtonIcon
                     title = "Entrar com Discord"
                     activeOpacity = {0.7}
                     onPress ={handleSignIn}
-                    />
+                    />}
                 </View>
             </View>
      </Background>

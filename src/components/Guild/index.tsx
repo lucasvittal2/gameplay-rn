@@ -21,7 +21,6 @@ export function Guild({
     data,
     ...rest
 }: Props){
-    console.log('**** ' + data.name)
     return (
         <TouchableOpacity
         style={styles.container}
