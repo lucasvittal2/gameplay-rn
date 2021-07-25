@@ -13,3 +13,4 @@ Expo Google Fonts  React Navigation Stack  React Native Gesture Handler  Expo Au
 
 
 🔖 Layout
+![image](https://user-images.githubusercontent.com/62555057/126901575-366bc249-14bd-4618-992b-eaf16164dc7a.png)
